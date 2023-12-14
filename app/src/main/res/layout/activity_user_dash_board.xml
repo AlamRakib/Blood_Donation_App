@@ -1,0 +1,616 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDashBoardActivity"
+    android:id="@+id/drawerlayout"
+
+
+
+    >
+
+    <!--tools:openDrawer="start"-->
+
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        >
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="?attr/actionBarSize"
+
+            >
+
+        </FrameLayout>
+
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
+    <!--
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppbar"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fabAlignmentMode="center"
+        app:fabCradleRoundedCornerRadius="50dp"
+        android:backgroundTint="#296D98"
+        app:menu="@menu/bottom_menu"
+
+        >
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_post_add_24"
+        app:layout_anchor="@id/bottomAppbar"
+        app:backgroundTint="#FF9800"
+
+        >
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    -->
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="User DashBoard"
+            app:titleTextColor="#050505"
+            app:navigationIcon="@drawable/baseline_menu_24"
+            app:navigationIconTint="#FF5722"
+            android:background="#C2E7C9"
+            android:elevation="20dp"
+            app:menu="@menu/toolbar_items"
+
+            >
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/ViewpagerId"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="?actionBarSize"
+                    android:background="@drawable/bottom_crubed"
+                    android:orientation="vertical">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/viewPager2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="80dp"
+                        android:paddingEnd="80dp">
+
+                    </androidx.viewpager2.widget.ViewPager2>
+
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="horizontal"
+                        android:weightSum="20"
+                        android:layout_marginTop="10dp"
+
+                        >
+
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:id="@+id/userPostId"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:background="#62ADB6"
+                            android:clickable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:soundEffectsEnabled="true"
+                            app:neumorph_shapeType="flat"
+                            app:neumorph_strokeColor="@color/black"
+                            android:layout_weight="10"
+                            app:neumorph_shadowColorDark="#E1281A"
+                            app:neumorph_shadowColorLight="#E1281A"
+                            app:neumorph_shadowElevation="3dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/imageViewId"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/newpost"
+                                    android:layout_gravity="center"
+                                    >
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:padding="5dp"
+                                    android:src="@drawable/blooglogo"
+                                    android:text="Post"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="serif"
+                                    >
+
+                                </TextView>
+
+                            </LinearLayout>
+
+                        </soup.neumorphism.NeumorphCardView>
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:id="@+id/cardView2Id"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:background="#62ADB6"
+                            android:clickable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:soundEffectsEnabled="true"
+                            app:neumorph_shapeType="flat"
+                            app:neumorph_strokeColor="@color/black"
+                            android:layout_weight="10"
+                            app:neumorph_shadowColorDark="#E1281A"
+                            app:neumorph_shadowColorLight="#E1281A"
+                            app:neumorph_shadowElevation="3dp"
+
+                            >
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                >
+
+                                <ImageView
+
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/status"
+                                    android:layout_gravity="center"
+                                    >
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:padding="5dp"
+                                    android:src="@drawable/blooglogo"
+                                    android:text="Status Feed"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="serif"
+                                    >
+
+                                </TextView>
+
+                            </LinearLayout>
+
+                        </soup.neumorphism.NeumorphCardView>
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="horizontal"
+                        android:weightSum="20"
+                        android:layout_marginTop="10dp"
+
+                        >
+
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:id="@+id/cardView3Id"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:background="#62ADB6"
+                            android:clickable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:soundEffectsEnabled="true"
+                            app:neumorph_shapeType="flat"
+                            app:neumorph_strokeColor="@color/black"
+                            android:layout_weight="10"
+                            app:neumorph_shadowColorDark="#E1281A"
+                            app:neumorph_shadowColorLight="#E1281A"
+                            app:neumorph_shadowElevation="3dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                >
+
+                                <ImageView
+
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/searchdonar"
+                                    android:layout_gravity="center"
+                                    >
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:padding="5dp"
+                                    android:src="@drawable/blooglogo"
+                                    android:text="Search Donar"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="serif"
+                                    >
+
+                                </TextView>
+
+                            </LinearLayout>
+
+                        </soup.neumorphism.NeumorphCardView>
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:id="@+id/cardView4Id"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_weight="10"
+                            android:background="#62ADB6"
+                            android:clickable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:soundEffectsEnabled="true"
+                            app:neumorph_shadowColorDark="#E1281A"
+                            app:neumorph_shadowColorLight="#E1281A"
+                            app:neumorph_shadowElevation="3dp"
+                            app:neumorph_shapeType="flat"
+                            app:neumorph_strokeColor="@color/black"
+
+                            >
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/partners">
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="serif"
+                                    android:padding="5dp"
+                                    android:src="@drawable/blooglogo"
+                                    android:text="Organization"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold">
+
+                                </TextView>
+
+                            </LinearLayout>
+
+                        </soup.neumorphism.NeumorphCardView>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="horizontal"
+                        android:weightSum="20"
+                        android:layout_marginTop="10dp"
+
+                        >
+
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:id="@+id/cardView5Id"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:background="#62ADB6"
+                            android:clickable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:soundEffectsEnabled="true"
+                            app:neumorph_shapeType="flat"
+                            app:neumorph_strokeColor="@color/black"
+                            android:layout_weight="10"
+                            app:neumorph_shadowColorDark="#E1281A"
+                            app:neumorph_shadowColorLight="#E1281A"
+                            app:neumorph_shadowElevation="3dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                >
+
+                                <ImageView
+
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ambulance"
+                                    android:layout_gravity="center"
+                                    >
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:padding="5dp"
+                                    android:src="@drawable/blooglogo"
+                                    android:text="Ambulance"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="serif"
+                                    >
+
+                                </TextView>
+
+                            </LinearLayout>
+
+                        </soup.neumorphism.NeumorphCardView>
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:id="@+id/cardView6Id"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:background="#62ADB6"
+                            android:clickable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:soundEffectsEnabled="true"
+                            app:neumorph_shapeType="flat"
+                            app:neumorph_strokeColor="@color/black"
+                            android:layout_weight="10"
+                            app:neumorph_shadowColorDark="#E1281A"
+                            app:neumorph_shadowColorLight="#E1281A"
+                            app:neumorph_shadowElevation="3dp"
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                >
+
+                                <ImageView
+
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/bloodbank"
+                                    android:layout_gravity="center"
+                                    >
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:padding="5dp"
+                                    android:src="@drawable/blooglogo"
+                                    android:text="Blood Bank"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="serif"
+                                    >
+
+                                </TextView>
+
+                            </LinearLayout>
+
+                        </soup.neumorphism.NeumorphCardView>
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_above="@+id/chipNavigationId"
+                    android:layout_below="@id/CategoryRelativelayout"
+
+
+                    >
+
+
+
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/donarbloodtypes">
+
+                        </ImageView>
+
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!--
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/chipNavigationId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cnb_menuResource="@menu/bottom_menu"
+        app:cnb_orientationMode="horizontal"
+        android:background="@drawable/shappedittext01"
+        android:elevation="18dp"
+        android:padding="8dp"
+
+        >
+
+      </com.ismaeldivita.chipnavigation.ChipNavigationBar>
+
+      <-->
+
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/nav_items"
+        app:headerLayout="@layout/nav_header"
+        android:layout_gravity="start"
+
+
+
+        >
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+

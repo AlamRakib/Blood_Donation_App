@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24"
+        android:checkable="true"
+
+
+        />
+
+
+    <item
+        android:id="@+id/share"
+        android:title="Share"
+        android:icon="@drawable/sshare"
+        android:checkable="true"
+
+
+        />
+
+
+    <item
+        android:id="@+id/developer"
+        android:title="About Me"
+        android:icon="@drawable/aboutme"
+        android:checkable="true"
+
+
+        />
+
+    <item
+        android:id="@+id/rating"
+        android:title="Rate Us"
+        android:icon="@drawable/rating"
+        android:checkable="true"
+
+
+        />
+
+
+
+    <item
+        android:id="@+id/privacy"
+        android:title="Privacy Policy"
+        android:icon="@drawable/privacypolicy"
+        android:checkable="true"
+
+        />
+
+
+</menu>

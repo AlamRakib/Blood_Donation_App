@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddDonarFragment"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bottom_crubed"
+        >
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/baseline_arrow_back_24">
+
+        </ImageButton>
+
+        <ImageView
+            android:id="@+id/iconTV"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/blooglogo"
+
+            >
+
+        </ImageView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconTV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:text="Add New Donar"
+            android:textColor="#000000"
+            android:textSize="20sp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <!--Name-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/NameTil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/userNameId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shappedittext01"
+                    android:drawableStart="@drawable/baseline_person_24"
+                    android:drawablePadding="10dp"
+                    android:hint="Name"
+                    android:inputType="textPersonName|textCapWords"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#6C6C6C"
+
+                    >
+
+                </EditText>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#99000000"
+
+                    >
+
+                </View>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+            <!--Mobile-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/NumberTil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/numberET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shappedittext01"
+                    android:drawableStart="@drawable/ic_baseline_call_24"
+                    android:drawablePadding="10dp"
+                    android:hint="Number"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#6C6C6C"
+
+                    >
+
+                </EditText>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#99000000"
+
+                    >
+
+                </View>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="105dp"
+                android:text="Select Blood"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/shappedittext01"
+                android:padding="1dp"
+
+                >
+
+            </TextView>
+
+            <!--Gender
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="250dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/shappedittext01"
+                >
+
+
+                <RadioButton
+                    android:id="@+id/maleid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male_text"
+                    android:textStyle="bold"
+                    android:textColor="#E14616"
+                    >
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/femaleid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female_text"
+
+                    android:textStyle="bold"
+                    android:textColor="#E14616"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                </RadioButton>
+
+
+            </LinearLayout>
+
+            -->
+
+            <!--Blood-->
+
+            <Spinner
+                android:id="@+id/spinnerId1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="140dp"
+                android:background="@android:drawable/btn_dropdown"
+                >
+
+            </Spinner>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="195dp"
+                android:text="Select Divison"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/shappedittext01"
+                android:padding="1dp"
+                >
+
+            </TextView>
+
+
+
+            <!--Divison-->
+
+            <Spinner
+                android:id="@+id/spinnerId2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="230dp"
+                android:background="@android:drawable/btn_dropdown"
+                >
+
+            </Spinner>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/districtNameTil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="290dp"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/districtNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shappedittext01"
+                    android:drawableStart="@drawable/baseline_location_on_24"
+                    android:drawablePadding="10dp"
+                    android:hint="District Or Thana"
+                    android:inputType="text|textCapWords"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#6C6C6C"
+
+
+                    >
+
+                </EditText>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#99000000"
+
+                    >
+
+                </View>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/textviewid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+
+                >
+
+            </TextView>
+
+
+            <ProgressBar
+                android:id="@+id/progressBarId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/districtNameTil"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="invisible">
+
+            </ProgressBar>
+
+
+
+
+            <!--Register Button-->
+
+            <Button
+                android:id="@+id/AddDonarButtonId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progressBarId"
+                android:background="@drawable/shape_button_01"
+                android:text="Add "
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+
+                >
+
+            </Button>
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

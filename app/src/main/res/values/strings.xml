@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">BD Blood Donation</string>
+
+    <string name="male_text">Male</string>
+    <string name="female_text">Female</string>
+
+    <string name="title_text">Blood Donation App</string>
+    <string name="message_text">Do you want to exit?</string>
+    <string name="delete_post">Do you want to Delete post?</string>
+
+    <style name="Yes" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#f00</item>
+    </style>
+
+    <style name="No" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#296D98</item>
+    </style>
+
+    <style name="ThemeOverlay.MaterialComponents.MaterialAlertDialog_Background" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:textColor">#296D98</item>
+    </style>
+
+    <string name="drawer_close">Close Drawer </string>
+    <string name="drawer_open">Open Drawer </string>
+
+
+    <string name="privacy_policy"><a href="https://sites.google.com/view/blood-donation-app/home">https://sites.google.com/view/blood-donation-app/home</a> </string>
+
+
+    <string-array name="Blood">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+
+    <string-array name="Divison">
+        <item>Dhaka</item>
+        <item>Chittagong</item>
+        <item>Rajsahi</item>
+        <item>Barisal</item>
+        <item>Khulna</item>
+        <item>Dinajpur</item>
+        <item>Rangpur</item>
+    </string-array>
+
+
+    <string name="new_user_signup">New User? <b>SignUp</b></string>
+
+
+</resources>
